@@ -1,0 +1,7 @@
+Initial seed 0xA80D4777
+Boomerang distinguisher for 8 rounds of LBlock
+Input difference: 	 b000000000000000
+Output difference: 	 0000000000000001
+Average probability = 2^(-24.2996)
+Number of boomerangs thrown = 2^28
+Number of boomerangs returned = 13

@@ -1,0 +1,7 @@
+Initial seed 0xC0481B3C
+Boomerang distinguisher for 13 rounds of TWINE
+Input difference: 	 0000060052000000
+Output difference: 	 2000050000006000
+Average probability = 2^(-inf)
+Number of boomerangs thrown = 2^30
+Number of boomerangs returned = 0

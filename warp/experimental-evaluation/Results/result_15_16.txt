@@ -1,0 +1,7 @@
+Initial seed 0xC046DB1C
+Boomerang distinguisher for 15 rounds of WARP
+Input difference: 	 0000000000000a00000000a500000000
+Output difference: 	 0a000000f000a00000500a0000000000
+Average probability = 2^(-28.0000)
+Number of boomerangs thrown = 2^28
+Number of boomerangs returned = 1

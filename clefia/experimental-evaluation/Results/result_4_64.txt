@@ -1,0 +1,7 @@
+Initial seed 0x38E02E13
+Boomerang distinguisher for 4 rounds of CLEFIA
+Input difference: 	 000000e2000000000000000000000000
+Output difference: 	 000000000000e2000000000000000000
+Average probability = 2^(-inf)
+Number of boomerangs thrown = 2^30
+Number of boomerangs returned = 0

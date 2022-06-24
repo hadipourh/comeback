@@ -1,0 +1,7 @@
+Initial seed 0xE22E4593
+Boomerang distinguisher for 9 rounds of LBlock-s
+Input difference: 	 0003000000000000
+Output difference: 	 0000000000003000
+Average probability = 2^(-inf)
+Number of boomerangs thrown = 2^31
+Number of boomerangs returned = 0
