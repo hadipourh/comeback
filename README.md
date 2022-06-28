@@ -25,7 +25,7 @@ Our tool to find distinguishers is written in Python3 and requires the following
 
 Our tool is written in [Python3](https://www.python.org/downloads/) and follows the modular design paradigm. For instance, one module provides a simple user interface for the user, one module finds the truncated differential trails according to the method described in our paper, and another module instantiates the discovered truncated trails and computes the differential effect. There is also another module that generates the shape of the discovered distinguisher. For the experimental evaluations we have employed the C implementations provided by the designers of targeted ciphers.
 
-The usage of our tool is the same for all applications. Thus we only show its usage for WARP. Our tool for WARP is located [here](warp). To see a brief documentation of parameters, see:
+The usage of our tool is the same for all applications. Thus we only show its usage for WARP. Our tool for WARP is located [here](warp). To see a brief documentation of parameters, run the following command:
 
 ```sh
 python3 boom.py --help
@@ -48,6 +48,8 @@ The result of running the above command is a shape like this:
 ![bmd.svg](miscellaneous/bmdwarp14r.svg)
 
 To theoretically compute the probability of boomerang switch in our 14-round boomerang distinguisher for WARP, you can use the code located [here](warp/theoreticalevaluation).
+
+---
 
 As another example, to reproduce our distinguisher for 23 rounds of WARP, you can run the following command:
 

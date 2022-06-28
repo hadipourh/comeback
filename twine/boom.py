@@ -74,7 +74,7 @@ def main():
     ##############################################################################################
     # Step2- Instantiate the upper/lower truncated trails with real differential trails
     diff_upper_trail = None
-    diff_effect_upper = None
+    diff_effect_upper = 0
     if r0 != 0:
         time_limit = 18000
         params = {"nrounds" : bm.r0,
@@ -101,7 +101,7 @@ def main():
         diff_effect_upper = diff.solve()
     ##############################################################################################
     diff_lower_trail = None
-    diff_effect_lower = None
+    diff_effect_lower = 0
     if r1 != 0:
         time_limit = 18000
         params = {"nrounds" : bm.r1,
@@ -143,10 +143,10 @@ def main():
         diff.print_trail(diff_trail=diff_lower_trail)
     print("-"*27)
     total_probability = 0
-    if diff_effect_upper != None:
+    if diff_effect_upper != 0:
         print("differential effect of the upper trail: 2^(%0.02f)" % diff_effect_upper)
         total_probability += diff_effect_upper*2
-    if diff_effect_lower != None:
+    if diff_effect_lower != 0:
         print("differential effect of the lower trail: 2^(%0.02f)" % diff_effect_lower)
         total_probability += diff_effect_lower*2
     upper_bound =  total_probability + (-2)*mactive_sboxes
@@ -222,32 +222,29 @@ def loadparameters(args):
     
     if args.inputfile:
         params["inputfile"] = args.inputfile
-
-    if args.r0:
+    
+    if args.r0 != None:
         params["r0"] = args.r0
 
-    if args.rm:
+    if args.rm != None:
         params["rm"] = args.rm
 
-    if args.r1:
+    if args.r1 != None:
         params["r1"] = args.r1
 
-    if args.w0:
+    if args.w0 != None:
         params["w0"] = args.w0
 
-    if args.wm:
+    if args.wm != None:
         params["wm"] = args.wm
 
-    if args.w1:
+    if args.w1 != None:
         params["w1"] = args.w1
-
-    if args.timelimit:
+    
+    if args.timelimit != None:
         params["timelimit"] = args.timelimit
 
-    if args.numofsols:
-        params["numofsols"] = args.numofsols
-
-    if args.numofsols:
+    if args.numofsols != None:
         params["numofsols"] = args.numofsols
 
     return params
