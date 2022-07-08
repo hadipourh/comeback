@@ -23,12 +23,12 @@ unsigned int init_prng(unsigned int offset);
 // #######################################################################################################
 // #######################################################################################################
 // ############################## User must change only the following lines ##############################
-const int DEG1 = 1;
-const int DEG2 = 27;
-const int NUMBER_OF_EXPERIMENTS = 1;   // Number of independent experiments
-const int NUMBER_OF_ROUNDS = 6;   // Number of rounds
+const int DEG1 = 10;
+const int DEG2 = 28;
+const int NUMBER_OF_EXPERIMENTS = 10;   // Number of independent experiments
+const int NUMBER_OF_ROUNDS = 10;   // Number of rounds
 
-char DP_STR[] = "00000000aaaaaaaa0a00aa00000a000a";
-char DC_STR[] = "a0000000000000000000000000000000";
+char DP_STR[] = "0a000000000000000000000000000000";
+char DC_STR[] = "0000a000000000000000000000000000";
 // #######################################################################################################
 // #######################################################################################################

@@ -1,7 +1,0 @@
-Initial seed 0x2546E537
-Boomerang distinguisher for 5 rounds of CLEFIA
-Input difference: 	 00000000e20000000000000000000000
-Output difference: 	 00000000000000000032000000000000
-Average probability = 2^(-13.0982)
-Number of boomerangs thrown = 2^28
-Number of boomerangs returned = 30611

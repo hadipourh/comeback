@@ -47,7 +47,7 @@ The result of running the above command is a shape like this:
 
 ![bmd.svg](miscellaneous/bmdwarp14r.svg)
 
-To theoretically compute the probability of boomerang switch in our 14-round boomerang distinguisher for WARP, you can use the code located [here](warp/theoreticalevaluation).
+To compute the probability of boomerang switch in our 14-round boomerang distinguisher for WARP based on the FBCT framework, refer to [warp/theoretical-evaluation](warp/theoretical-evaluation) and see the [README](warp/theoretical-evaluation/README.md). For experimental verifications refer to [warp/experimental-evaluation](warp/experimental-evaluation) and see [the README](warp/experimental-evaluation/README.md).
 
 ---
 

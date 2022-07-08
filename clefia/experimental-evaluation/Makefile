@@ -23,15 +23,18 @@
 CC = g++
 CFLAGS  = -g -Wall -fopenmp -O3 --std=c++11
 # the build target(s) executable:
-TARGET = boomerang
+TARGET = all
 # If you execute make without a flag, it does the actions under the "all" target by default
-all: boomerang.o clefia.o
-	$(CC) $(CFLAGS) -o $(TARGET) boomerang.o
+all: boomerang diff
+
 diff: diff.c diff.h clefia.o
 	$(CC) $(CFLAGS) -o diff diff.c
-boomerang.o: boomerang.c boomerang.h
-	$(CC) $(CFLAGS) -c boomerang.c
-clefia.o: clefia.c clefia.h
+
+boomerang: boomerang.c boomerang.h clefia
+	$(CC) $(CFLAGS) -o boomerang boomerang.c
+
+clefia: clefia.c clefia.h
 	$(CC) $(CFLAGS) -c clefia.c
+
 clean:
-	rm -f *.o $(TARGET) diff result*
+	rm -f *.o $(TARGET) boomerang diff result*

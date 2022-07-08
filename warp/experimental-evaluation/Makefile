@@ -20,4 +20,4 @@ middle_verification: middle_verification.cpp warp.c warp.h
 	$(CC) $(CFLAGS) -o middle_verification middle_verification.cpp warp.c
 
 clean:
-	rm -f boomerang middle_verifiaction diff
+	rm -f boomerang middle_verification diff
