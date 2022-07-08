@@ -6,4 +6,4 @@ To compute the probability of the 10-round boomerang switch used in our 14-round
 python3 fbct.py
 ```
 
-FBCT implements the FBCT framework to compute the probability based on equation 2 in our paper.
+[fbct.py](fbct.py) implements the FBCT framework to compute the probability based on equation 2 in our paper.
