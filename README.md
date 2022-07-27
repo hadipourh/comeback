@@ -64,7 +64,7 @@ Running the above command leaves a `bmd.tex` file in the working directory. By c
 
 ## S-box Analyzer
 
-Our tool for encoding the DDT, LAT and the [MPT]() of S-boxes is available [here](https://github.com/hadipourh/sboxanalyzer).
+Our tool for encoding the DDT, LAT and the [MPT](https://tosc.iacr.org/index.php/ToSC/article/view/9715) of S-boxes is available [here](https://github.com/hadipourh/sboxanalyzer).
 
 ## Paper
 
