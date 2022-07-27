@@ -9,6 +9,7 @@ This repository includes the source code of tools we used in our paper entitled 
 - [An Efficient Automatic Tool to Search for Boomerang Distinguishers](#an-efficient-automatic-tool-to-search-for-boomerang-distinguishers)
   - [Prerequisites](#prerequisites)
   - [Usage](#usage)
+  - [S-box Analyzer](#s-box-analyzer)
   - [Paper](#paper)
   - [License](#license)
 
@@ -60,6 +61,10 @@ python3 boom.py -r0 6 -rm 10 -r1 7 -w0 2 -wm 1 -w1 2
 Running the above command leaves a `bmd.tex` file in the working directory. By compiling this file using `latexmk -pdf bmd.tex` command you can generate the shape of the distinguisher in PDF format.
 
 ![bmd.svg](miscellaneous/bmdwarp23r.svg)
+
+## S-box Analyzer
+
+Our tool for encoding the DDT, LAT and the [MPT]() of S-boxes is available [here](https://github.com/hadipourh/sboxanalyzer).
 
 ## Paper
 
