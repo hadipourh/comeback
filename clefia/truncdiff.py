@@ -184,31 +184,24 @@ class WordClefia:
         x_3 = self.generate_round_x_variables(rn - 1, ul)
         x_4 = self.generate_round_x_variables(rn, ul)
 
-        for n in range(4):
-            constraints += f"dsm_{self.DSM_counter} - {x_3[0][n]} >= 0\n"
-            constraints += f"dsm_{self.DSM_counter} - {x_1[2][n]} >= 0\n"
-        temp = x_3[0] + x_1[2]
-        temp = " - ".join(temp)
-        constraints += f"dsm_{self.DSM_counter} - {temp} <= 0\n"
-        temp = x_3[0] + x_1[2] + x_4[0] + x_0[0]
-        temp = " + ".join(temp)
-        constraints += f"{temp} - 5 dsm_{self.DSM_counter} >= 0\n"
+        temp0 = " + ".join(x_3[0] + x_1[2])
+        constraints += f"{temp0} - 8 dsm_{self.DSM_counter} <= 0\n"        
+        constraints += f"{temp0} - dsm_{self.DSM_counter} >= 0\n"
+        temp1 = " + ".join(x_3[0] + x_1[2] + x_4[0] + x_0[0])
+        constraints += f"{temp1} - 5 dsm_{self.DSM_counter} >= 0\n"
         self.milp_variables.append(f"dsm_{self.DSM_counter}")
 
         self.DSM_counter += 1
 
-        for n in range(4):
-            constraints += f"dsm_{self.DSM_counter} - {x_2[2][n]} >= 0\n"
-            constraints += f"dsm_{self.DSM_counter} - {x_0[0][n]} >= 0\n"
-        temp = x_2[2] + x_0[0]
-        temp = " - ".join(temp)
-        constraints += f"dsm_{self.DSM_counter} - {temp} <= 0\n"
-        temp = x_2[2] + x_0[0] + x_4[1] + x_0[1]
-        temp = " + ".join(temp)
-        constraints += f"{temp} - 5 dsm_{self.DSM_counter} >= 0\n"
+        temp0 = " + ".join(x_3[2] + x_1[0])
+        constraints += f"{temp0} - 8 dsm_{self.DSM_counter} <= 0\n"        
+        constraints += f"{temp0} - dsm_{self.DSM_counter} >= 0\n"
+        temp1 = " + ".join(x_4[2] + x_3[2] + x_1[0] + x_0[2])
+        constraints += f"{temp1} - 5 dsm_{self.DSM_counter} >= 0\n"
         self.milp_variables.append(f"dsm_{self.DSM_counter}")
 
         self.DSM_counter += 1
+
         return constraints
 
     def generate_constraints(self, ul="u"):
